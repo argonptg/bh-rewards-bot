@@ -14,3 +14,6 @@ build
 users.json
 rewards.json
 .env
+/cookies/
+/inventories/
+/screenshots/

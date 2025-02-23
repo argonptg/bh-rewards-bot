@@ -1,6 +1,7 @@
 "use strict";
 
 import puppeteer, { Frame, Page } from "puppeteer";
+
 const TimeoutError = puppeteer.errors.TimeoutError;
 
 export abstract class TwitchPage {

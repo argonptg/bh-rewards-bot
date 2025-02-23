@@ -177,13 +177,20 @@ export default class Action {
             // stop if brawl stopped streaming
             if (!await scheduler.isStreaming()) break;
             try {
+                console.log("Watching...");
                 await watcher.watch();
                 // have to click before the video disappears
+
+                console.log("Opened extension");
                 await watcher.clickExtension();
+
+                console.log("Closed video stream");
                 await watcher.hideVideo();
                 // clicking inventory might fail
+                console.log("Opened inventory");
                 const success = await watcher.clickInventory();
                 if (!success) {
+                    console.log("Stopped watcher");
                     await watcher.stop();
                     continue;
                 }

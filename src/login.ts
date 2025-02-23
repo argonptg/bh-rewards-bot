@@ -14,6 +14,8 @@ export class LoginPage extends TwitchPage {
         // clear cookies
         await Cookies.clear(this.page);
 
+        await this.page.setUserAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36");
+
         // Go to login page
         await this.page.goto("https://www.twitch.tv/login");
 
